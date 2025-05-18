@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chat Monitor</title>
+  <script defer src="frontend.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background-color: #f0f2f5;
+    }
+
+    #chatBox {
+      width: 100%;
+      height: 400px;
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 1rem;
+      overflow-y: scroll;
+      border-radius: 10px;
+    }
+
+    .message {
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      max-width: 70%;
+      clear: both;
+    }
+
+    .user {
+      background-color: #dbeeff;
+      color: #007bff;
+      float: right;
+      text-align: right;
+    }
+
+    .bot {
+      background-color: #dcfce7;
+      color: #28a745;
+      float: left;
+      text-align: left;
+    }
+
+    #messageInput {
+      width: 100%;
+      height: 60px;
+      margin-top: 1rem;
+      border-radius: 10px;
+      padding: 0.5rem;
+    }
+
+    #sendBtn {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #sendBtn:hover {
+      background: #0056b3;
+    }
+
+    #newChatBtn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #newChatBtn:hover {
+      background-color: #45a049;
+    }
+
+    /* Sidebar and History styles */
+    #sidebar {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+    }
+
+    #toggleHistoryBtn {
+      padding: 8px 12px;
+      background-color: #6c757d;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #toggleHistoryBtn:hover {
+      background-color: #5a6268;
+    }
+
+    #historyPanel {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 10px;
+      padding: 10px;
+      width: 200px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #historyList li {
+      padding: 6px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+    }
+
+    #historyList li:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar and History Button -->
+  <div id="sidebar">
+    <button id="toggleHistoryBtn">📂 History</button>
+    <div id="historyPanel" class="hidden">
+      <h3>Chat History</h3>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <h1>💬 ChatMonitor</h1>
+  <div id="chatBox"></div>
+  <button id="newChatBtn">Start New Chat</button>
+  <textarea id="messageInput" placeholder="Type your message..."></textarea><br>
+  <button id="sendBtn">Send</button>
+</body>
+</html>
