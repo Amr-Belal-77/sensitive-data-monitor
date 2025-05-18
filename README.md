@@ -1,4 +1,5 @@
-# ![icon](./icon.png) Sensitive Data Chat Monitor
+# <img src="./icon.png" alt="icon" width="100"/> Sensitive Data Chat Monitor
+
 
 A lightweight web-based chat monitor built to **prevent employees from accidentally leaking sensitive data** such as passwords in internal chat tools. This app acts as a safeguard, blocking risky messages unless explicitly overridden by the user.
 
